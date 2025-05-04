@@ -13,6 +13,10 @@ import sys
 # To import the preprocessor module from src
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(BASE_DIR)
+
+MODEL_PATH = os.path.join(BASE_DIR, 'model.h5')
+PREPROCESSOR_PATH = os.path.join(BASE_DIR, 'preprocessor.pkl')
+ENCODER_PATH = os.path.join(BASE_DIR, 'label_encoder.pkl')
 # Load preprocessor, model, and label encoder
 @st.cache_resource
 
@@ -30,10 +34,11 @@ def select_relevant_landmarks(X: np.ndarray, relevant_ids=None) -> np.ndarray:
     return X[:, selected_indices]
 
 def load_resources():
-    with open("new_preprocessor.pkl", 'rb') as f:
+    with open(PREPROCESSOR_PATH, 'rb') as f:
         preprocessor = cloudpickle.load(f)
-    model = load_model("checkpoint.h5")
-    label_encoder = cloudpickle.load(open("label_encoder.pkl", 'rb'))
+        
+    model = load_model(MODEL_PATH)
+    label_encoder = cloudpickle.load(open(ENCODER_PATH, 'rb'))
     return preprocessor, model, label_encoder
 
 preprocessor, model, label_encoder = load_resources()
