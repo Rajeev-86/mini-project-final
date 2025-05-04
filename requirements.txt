@@ -3,7 +3,7 @@ tensorflow
 mediapipe
 opencv-python-headless
 cloudpickle
-numpy
+numpy==2.0.2
 pandas
 Pillow
 scikit-learn
