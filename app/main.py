@@ -11,6 +11,20 @@ import os
 
 # Load preprocessor, model, and label encoder
 @st.cache_resource
+
+def preprocess_first(X: pd.Series) -> np.ndarray:
+    return np.vstack(X.apply(lambda x: np.fromstring(x.strip('[]'), sep=' '))).astype(np.float64)
+
+def select_relevant_landmarks(X: np.ndarray, relevant_ids=None) -> np.ndarray:
+    if relevant_ids is None:
+        relevant_ids = [0, 11, 12, 13, 14, 15, 16, 23, 24, 25, 26, 27, 28, 31, 32]
+
+    selected_indices = []
+    for idx in relevant_ids:
+        selected_indices.extend([idx * 3, idx * 3 + 1, idx * 3 + 2])
+
+    return X[:, selected_indices]
+
 def load_resources():
     with open("new_preprocessor.pkl", 'rb') as f:
         preprocessor = cloudpickle.load(f)
