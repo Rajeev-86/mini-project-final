@@ -1,7 +1,7 @@
 streamlit
 tensorflow
 mediapipe
-opencv-python-headless
+opencv-python
 cloudpickle
 numpy
 pandas
