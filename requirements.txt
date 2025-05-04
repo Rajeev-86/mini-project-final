@@ -1,6 +1,6 @@
 streamlit
 tensorflow==2.18.0
-mediapipe
+mediapipe==0.10.5
 opencv-python-headless
 cloudpickle
 numpy==2.0.2
