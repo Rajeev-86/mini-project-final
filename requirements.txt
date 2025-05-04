@@ -1,10 +1,9 @@
-setuptools==68.2.2
 streamlit
 tensorflow==2.16.2
-mediapipe==0.10.20
+mediapipe==0.10.9
 opencv-python-headless
 cloudpickle
-numpy==1.25.2
+numpy==1.23.5
 pandas
 Pillow
 scikit-learn
