@@ -8,7 +8,11 @@ from tensorflow.keras.models import load_model
 from PIL import Image
 import tempfile
 import os
+import sys
 
+# To import the preprocessor module from src
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(BASE_DIR)
 # Load preprocessor, model, and label encoder
 @st.cache_resource
 
