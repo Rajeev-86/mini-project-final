@@ -6,3 +6,4 @@ cloudpickle
 numpy
 pandas
 Pillow
+scikit-learn
