@@ -10,8 +10,9 @@ import tempfile
 import os
 import sys
 
-# To import the preprocessor module from src
-BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+# To import
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 sys.path.append(BASE_DIR)
 
 MODEL_PATH = os.path.join(BASE_DIR, 'model.h5')
