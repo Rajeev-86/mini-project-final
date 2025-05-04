@@ -2,6 +2,7 @@ streamlit
 tensorflow
 mediapipe
 opencv-python-headless
+libgl1
 cloudpickle
 numpy==2.0.2
 pandas
