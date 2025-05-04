@@ -1,0 +1,39 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment
+.env
+.venv/
+venv/
+ENV/
+env/
+*.env
+
+# IDEs
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Streamlit-specific
+.streamlit/secrets.toml
+
+# Model & data files (if not meant for public sharing)
+*.h5
+*.pkl
+*.joblib
+*.npy
+*.npz
+
+# Logs
+*.log
+
+# OS-generated
+*.swp
